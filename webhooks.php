@@ -55,7 +55,7 @@ echo "OK";
 
 <?php
  
-$strAccessToken = "ACCESS_TOKEN";
+$strAccessToken = "RIJmmdvB98W8HCxZssyzUsJDFr3hNG5Z7AMawa1V+FhocFwiNsp/9XX8mC360uLnp69wzCM9SsX6k1lB1d4Gs6KDUmFgfWo/jE83ktX8GPJ/Z33IlZe5BkAkxISoNr1oM3FrKRIFfK5BpSb6qalRFAdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
