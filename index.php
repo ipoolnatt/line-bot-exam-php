@@ -15,8 +15,8 @@ foreach ($events['events'] as $event) {
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['type'];
-  $text1 = $event['source']['groupId'];
-  $text2 = $event['source']['userId'];
+  $groupId = $event['source']['groupId'];
+  $userId = $event['source']['userId'];
 // Get replyToken
 $replyToken = $event['replyToken'];
 // Build message to reply back
@@ -26,6 +26,7 @@ $messages = [
 ];
 // Make a POST Request to Messaging API to reply to sender
 $url = 'https://api.line.me/v2/bot/message/reply';
+$url1 = 'https://api.line.me/v2/bot/group/'.$groupId'/member/'.$userId;
 $data1 = [
 'replyToken' => $replyToken,
 'messages' => [$messages],
