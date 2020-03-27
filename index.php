@@ -16,7 +16,7 @@
         $arrayPostData = array();
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $id;
+        $arrayPostData['messages'][0]['text'] = ();
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
@@ -57,8 +57,8 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
-        $strUrl = "https://api.line.me/v2/bot/message/reply";
-        //$strUrl = "https://api.line.me/v2/bot/profile/".$userId;
+        //$strUrl = "https://api.line.me/v2/bot/message/reply";
+        $strUrl = "https://api.line.me/v2/bot/profile/".$id;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$strUrl);
         curl_setopt($ch, CURLOPT_HEADER, false);
